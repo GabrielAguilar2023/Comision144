@@ -8,6 +8,7 @@ public class Pronostico {
     ResultadoEnum resultado;
 
     public int puntos(){
+
         return 0;
     }
 }

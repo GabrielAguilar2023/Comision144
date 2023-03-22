@@ -9,6 +9,6 @@ public class Partido {
     int golesEquipo2;
     public ResultadoEnum resultado(Equipo equipo) {
         return ResultadoEnum.EMPATE;
-                // Completar..
+                // Completar...
     }
 }
