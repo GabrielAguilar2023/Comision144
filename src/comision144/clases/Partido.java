@@ -17,6 +17,7 @@ public class Partido {
         this.idPartido = datosEntrada[4];
     }
 
+//******METODO*******
     public ResultadoEnum resultado (Equipo equipo) {
         return ResultadoEnum.GANADOR ;
         //todo
