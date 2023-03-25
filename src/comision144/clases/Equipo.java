@@ -3,7 +3,7 @@ public class Equipo {
     public String nombre;
     public String descripcion;
 
-    //Constructor de la clase
+//*****CONSTRUCTOR********
     public Equipo(String nombre) {
         this.nombre = nombre;
         this.descripcion ="Seleccion";
