@@ -40,11 +40,9 @@ public class Main {
         dimensionPronosticos = analizarArchivos(archivoPronosticos); // determina la validez de los archivos de entrada.
 
         if ((dimensionResultado[0]>1) && dimensionPronosticos[0]>1){ // Si los archivos son validos continuar
+            System.out.println("------------Archivo de Resultados----------------------");
             var resultados  = cargarArchivoDeResultados(archivoResultados,dimensionResultado);
-
-            System.out.println("-------------------------------------------");
-
-
+            System.out.println("------------------ Pronosticos ------------------------");
             var pronosticos = cargarArchivoDePronosticos(archivoPronosticos,dimensionPronosticos);
 
 
@@ -99,7 +97,6 @@ public class Main {
         for (String texto : Files.readAllLines(Paths.get(archivo))) { // Extrae filas del archivo
             String vectorAux[] = texto.split(";");  //Separa las columnas de cada fila
             System.out.println(texto);
-
             if(contadorFila>0) {    // Para evitar cargar en un objeto el encabezado de la tabla
                 informacionArchivo[contadorFila-1]= new Pronostico(vectorAux);
             }
