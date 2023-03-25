@@ -41,6 +41,10 @@ public class Main {
 
         if ((dimensionResultado[0]>1) && dimensionPronosticos[0]>1){ // Si los archivos son validos continuar
             var resultados  = cargarArchivoDeResultados(archivoResultados,dimensionResultado);
+
+            System.out.println("-------------------------------------------");
+
+
             var pronosticos = cargarArchivoDePronosticos(archivoPronosticos,dimensionPronosticos);
 
 
@@ -94,22 +98,24 @@ public class Main {
 
         for (String texto : Files.readAllLines(Paths.get(archivo))) { // Extrae filas del archivo
             String vectorAux[] = texto.split(";");  //Separa las columnas de cada fila
+            System.out.println(texto);
+
             if(contadorFila>0) {    // Para evitar cargar en un objeto el encabezado de la tabla
                 informacionArchivo[contadorFila-1]= new Pronostico(vectorAux);
-                System.out.println("borrar esta linea");
             }
             contadorFila++;
         }
         return informacionArchivo;
     }
 
-    public static Partido[] cargarArchivoDeResultados (String archivo,int []dimension)throws IOException{
+    public static Partido[] cargarArchivoDeResultados (String archivo, int []dimension)throws IOException{
         Partido[] informacionArchivo = new Partido[dimension[0]-1];
         int contadorFila = 0;
         //String vectorAux[];  //Vector auxiliar para cargar las columnas
 
         for (String texto : Files.readAllLines(Paths.get(archivo))) { // Extrae filas del archivo
             String vectorAux[] = texto.split(";");  //Separa las columnas de cada fila
+            System.out.println(texto);
             if(contadorFila>0) {    // Para evitar cargar en un objeto el encabezado de la tabla
                 informacionArchivo[contadorFila-1]= new Partido(vectorAux);
             }

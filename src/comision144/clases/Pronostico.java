@@ -17,7 +17,7 @@ public class Pronostico {
 
         if (prediccion[1].equals("X")) {
             this.equipo.nombre = prediccion[0];
-            this.resultado= ResultadoEnum.GANADOR;
+            this.resultado = ResultadoEnum.GANADOR;
         }else{
             if (prediccion[2].equals("X")){
                 this.equipo.nombre = prediccion[0];
@@ -31,7 +31,7 @@ public class Pronostico {
         }
     }
     //Coonstructor para vincular con los objetos del archivo resultados
-    public Pronostico(Partido partido,String [] prediccion) {
+    public Pronostico(Partido partido, String [] prediccion) {
         this.partido = partido;
         this.equipo = new Equipo("");
 
