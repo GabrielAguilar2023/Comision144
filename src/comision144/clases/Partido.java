@@ -8,12 +8,12 @@ public class Partido {
     public int golesEquipo2;
     public String idPartido;
 
-    // Constructor de la clase
+//*******CONSTRUCTOR********
     public Partido(String [] datosEntrada) {
         this.equipo1 = new Equipo(datosEntrada[0]);   // Creacion del objeto
         this.equipo2 = new Equipo(datosEntrada[3]);   // Creacion del Objeto
-        this.golesEquipo1 = Integer.parseInt(datosEntrada[1]);
-        this.golesEquipo2 = Integer.parseInt(datosEntrada[2]);
+        this.golesEquipo1 = Integer.parseInt(datosEntrada[1]);// pasa de texto a numero
+        this.golesEquipo2 = Integer.parseInt(datosEntrada[2]);// pasa de texto a numero
         this.idPartido = datosEntrada[4];
     }
 

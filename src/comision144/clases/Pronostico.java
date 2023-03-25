@@ -10,6 +10,7 @@ public class Pronostico {
     // |    Equipo1    |     Gana1     |    Empata     |     Gana2     |    Equipo2    |
     // | prediccion[0] | prediccion[1] | prediccion[2] | prediccion[3] | prediccion[4] |
 
+//**** CONSTRUCTOR *****
     public Pronostico (String [] prediccion,Partido partidoExistenteEnArchivoResultados) {
         this.partidoSobreElQueSeApuesta = partidoExistenteEnArchivoResultados;
         this.equipoSobreElQueSeApuesta = new Equipo("");
@@ -30,7 +31,7 @@ public class Pronostico {
         }
     }
 
-
+//******METODO********
     public int puntos (){
 
             if ((this.partidoSobreElQueSeApuesta.golesEquipo1) > (this.partidoSobreElQueSeApuesta.golesEquipo2)) {

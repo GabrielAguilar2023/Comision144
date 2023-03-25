@@ -17,7 +17,6 @@ public class Main {
         String archivoPronosticos;
         Scanner CapturaArchivo = new Scanner(System.in);
 
-
 // Entrada de archivos por consola
             System.out.println("Directorio donde se encuentra el archivo resultados.csv: ");
 // El objeto Scanner CapturaArchivo agarra el texto ingresado por teclado de la ruta del directorio y le suma el nombre del archivo
