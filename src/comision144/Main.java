@@ -38,7 +38,6 @@ public class Main {
             System.out.println("");
 
             mostrarPuntajeObtenido(vectorDeObjetosdelArchivoPronosticos);
-            System.out.println("Fin");
         }
     }
 
