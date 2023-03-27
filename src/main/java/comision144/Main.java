@@ -30,12 +30,12 @@ public class Main {
 
 // Si los archivos existen y tienen mas de una fila de datos continuar
         if ((dimensionResultado[0]>1) && dimensionPronosticos[0]>1){
-            System.out.println("");
+            System.out.println();
             System.out.println("----------- Archivo de Resultados ---------------------");
             var vectorDeObjetosdelArchivoresultados  = cargarArchivoDeResultados(archivoResultados,dimensionResultado);
             System.out.println("------------------ Pronosticos ------------------------");
             var vectorDeObjetosdelArchivoPronosticos = cargarArchivoDePronosticos(vectorDeObjetosdelArchivoresultados,archivoPronosticos,dimensionPronosticos);
-            System.out.println("");
+            System.out.println();
 
             mostrarPuntajeObtenido(vectorDeObjetosdelArchivoPronosticos);
         }
@@ -67,7 +67,7 @@ public class Main {
     int contadorFila = 0;
 // Extrae filas y crea los objetos Pronostico relacionados con los objetos partido ya creados en el metodo cargarArchivoDeResultados
         for (String texto : Files.readAllLines(Paths.get(archivo))) { // Extrae filas del archivo
-            String vectorAux[] = texto.split(";");  //Separa las columnas de cada fila
+            String[] vectorAux = texto.split(";");  //Separa las columnas de cada fila
             System.out.println(texto);
             if (contadorFila > 0) {    // Para evitar cargar en un objeto el encabezado de la tabla
                 for (int i = 0; i < vectorDeObjetosPartido.length; i++) {
@@ -91,7 +91,7 @@ public class Main {
         for (String texto : Files.readAllLines(Paths.get(archivo))) { // Extrae filas del archivo
             System.out.println(texto);
 // Separa los datos de cada linea
-            String vectorAux[] = texto.split(";");  //Separa las columnas de cada fila
+            String[] vectorAux = texto.split(";");  //Separa las columnas de cada fila
 // Crea los objetos Partido a partir de los datos del Archivo resultados.csv
             if(contadorFila>0) {    // Para evitar cargar en un objeto el encabezado de la tabla
                 vectorDeObjetosPartidoDelArchivoResultados[contadorFila-1]= new Partido(vectorAux);
