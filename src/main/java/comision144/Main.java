@@ -20,9 +20,9 @@ public class Main {
 // Entrada de archivos por consola
             System.out.println("Directorio donde se encuentra el archivo resultados.csv: ");
 // El objeto Scanner CapturaArchivo agarra el texto ingresado por teclado de la ruta del directorio y le suma el nombre del archivo
-            archivoResultados = CapturaArchivo.nextLine()+"\\resultados.csv";
+            archivoResultados = CapturaArchivo.nextLine()+"/resultados.csv";
             System.out.println("Directorio donde se encuentra el archivo pronosticos.csv: ");
-            archivoPronosticos = CapturaArchivo.nextLine()+"\\pronosticos.csv";
+            archivoPronosticos = CapturaArchivo.nextLine()+"/pronosticos.csv";
 
 // Determina la cantidad de filas y columnas de los archivos .csv dimension...[0] filas; dimension...[1] columnas
         dimensionResultado = analizarArchivos(archivoResultados);
