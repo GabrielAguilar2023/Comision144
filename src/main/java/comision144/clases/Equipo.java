@@ -6,6 +6,6 @@ public class Equipo {
 //*****CONSTRUCTOR********
     public Equipo(String nombre) {
         this.nombre = nombre;
-        this.descripcion ="Seleccion";
+        this.descripcion ="Selecciones";
     }
 }
